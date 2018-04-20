@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>neihan_video</title>
+
+</head>
+<body>
+
+{% for var in video_list %}
+<div>
+{{var.content|safe}}
+</div>
+<div><video controls="controls"><source src="{{var.video_url|safe}}" type="video/mp4" /><source src="{{var.video_url|safe}}" type="video/ogg" /><source src="{{var.video_url|safe}}" type="video/webm" /><object data="movie.mp4"><embed src="{{var.video_url|safe}}" /></object><video></div>
+{% endfor %}
+
+<div>{{video_list}}</div>
+
+
+</body>
+</html>

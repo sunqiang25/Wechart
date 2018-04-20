@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>joke</title>
+
+</head>
+<body>
+
+{% for var in joke_list %}
+<div>
+<table border="0" cellspacing="1" >
+<tr>
+<td>{{var.username|safe}}</td>
+</tr>
+<tr><td class="content">{{var.content|safe}}</td></tr>
+</table>
+</div>
+<div><img src="http:{{var.imgurl}}" width="100%" height="auto"></div>
+{% endfor %}
+
+
+
+
+</body>
+</html>
